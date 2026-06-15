@@ -1,6 +1,6 @@
 # A PubMed-Scale Dataset of Structured Biomedical Abstracts
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20336717.svg)](https://doi.org/10.5281/zenodo.20336717)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.11361-b31b1b.svg?style=flat)](https://arxiv.org/abs/2606.11361) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20336717.svg)](https://doi.org/10.5281/zenodo.20336717)
 
 ## Dataset
 
@@ -59,4 +59,13 @@ bash scripts/reproduce_paper_eval.sh
 
 ## Citation
 
-TBD
+If you use our dataset/code in your research, please cite our preprint:
+
+```bibtex
+@article{chang2026pubmed,
+  title={A PubMed-Scale Dataset of Structured Biomedical Abstracts},
+  author={Chang, Chia-Hsuan and Song, Haerin and Ondov, Brian and Xu, Hua},
+  journal={arXiv preprint arXiv:2606.11361},
+  year={2026}
+}
+```
