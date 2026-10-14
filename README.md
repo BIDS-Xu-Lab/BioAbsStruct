@@ -22,7 +22,16 @@ Unzip `eval_data.zip` to the project root for the toy samples and pre-computed r
 
 ## Reconstruct Section Text from the Released Offsets
 
-Download the offset files from Zenodo and the PubMed baseline and update XML files from https://ftp.ncbi.nlm.nih.gov/pubmed/, then run:
+Download the offset files from Zenodo. Then download the PubMed 2026 baseline files and the update files through `pubmed26n1432` (the snapshot used to build the dataset) to `pubmed/`:
+
+```bash
+mkdir -p pubmed && cd pubmed
+wget ftp://ftp.ncbi.nlm.nih.gov/pubmed/baseline/pubmed26n*.xml.gz
+for i in $(seq 1335 1432); do wget ftp://ftp.ncbi.nlm.nih.gov/pubmed/updatefiles/pubmed26n$i.xml.gz; done
+cd ..
+```
+
+Update files after `pubmed26n1432` should not be added: they contain records revised after the snapshot, which would not match the hash. Then run:
 
 ```bash
 # Full subset from a local copy of the PubMed XML files
